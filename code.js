@@ -63,6 +63,6 @@ function GetMaxTeamStatVal(format){
 
 function GetMovePower(move){
     if (move.includes("Amnesia")){
-        return //0
+        return 0;
     }
 }
