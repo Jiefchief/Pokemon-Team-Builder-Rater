@@ -1,0 +1,10 @@
+{
+    "name": "Team Rater",
+    "description" : "Rates PS! teams",
+    "version": "0.1",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    }
+  }
