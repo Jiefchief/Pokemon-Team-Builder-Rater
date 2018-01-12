@@ -6,7 +6,12 @@ test.onmousewheel = dothing;
 
 function dothing (){
     let txt = test.querySelector("textarea").innerHTML;
-    ParsePSData(txt);
+    if (!txt.includes("Level")){
+        ParsePSData(txt);
+    }
+    else{
+        test.querySelector("textarea").innerHTML = "STOP TRYING TO BREAK MY EXTENSION (ﾉಠдಠ)ﾉ︵┻━┻";
+    }
 }
 
 function ParsePSData(data){
@@ -34,6 +39,14 @@ function DoCalc(data){ //0, 9
     let teamAccVal;
 
     console.log(teamStatVal);
+
+    let ratingInsert = document.createElement('li');
+    ratingInsert.innerHTML = '<a class="roomtab button cur closable tRating" href="/teambuilder"><span>Rating</span><span>' + teamStatVal +'</span></a><button class="closebutton" name="closeRoom" value="teambuilder" aria-label="Close"><i class="fa fa-times-circle"></i></button>';
+    let tabSection = document.querySelector(".inner");
+
+    tabSection.querySelector("ul").appendChild(ratingInsert);
+    /*
+    <li><a class="roomtab button cur closable" href="/teambuilder"><i class="fa fa-pencil-square-o"></i> <span>Teambuilder</span></a><button class="closebutton" name="closeRoom" value="teambuilder" aria-label="Close"><i class="fa fa-times-circle"></i></button></li>*/
 }
 
 function GetBaseStats(pokemon){
