@@ -6,5 +6,12 @@
     "browser_action": {
       "default_popup": "index.html",
       "default_icon": "icon.png"
-    }
+    },
+
+    "content_scripts": [{
+        "js": ["code.js"],
+        "matches": ["https://play.pokemonshowdown.com/teambuilder"]
+    }],
+
+    "permissions": ["tabs", "<all_urls>"]
   }
