@@ -2,7 +2,12 @@ let test = document.querySelector("html");
 /*for (let jo = 0; jo < 2; jo++){
     console.log("test loop" + jo);
 }*/
-test.onmousewheel = dothing;
+//test.onmousewheel = dothing;
+test.addEventListener('keydown', function(event){
+    if (event.keyCode == 16){
+        dothing();
+    }
+})
 
 function dothing (){
     let txt = test.querySelector("textarea").innerHTML;
