@@ -6,7 +6,7 @@ test.onmousewheel = dothing;
 
 function dothing (){
     let txt = test.querySelector("textarea").innerHTML;
-    if (!txt.includes("Level")){
+    if (!txt.includes("Level") && txt.includes("EV")){
         ParsePSData(txt);
     }
     else{
@@ -27,9 +27,9 @@ function DoCalc(data){ //0, 9
         
         let i = j * 8;
         console.log(data[i]);
-        GetStatValue(data[i]); //testing method
-        teamStatVal += (GetBaseStats(data[i])[0] + GetBaseStats(data[i])[3] + GetBaseStats(data[i])[4] + (GetBaseStats(data[i])[1] / 2) + (GetBaseStats(data[i])[2] / 2)) * 2; //[hp + spec + speed + (atk/2) + (def/2)] * 2
-        
+        //GetStatValue(data[i]); //testing method
+        //teamStatVal += (GetBaseStats(data[i])[0] + GetBaseStats(data[i])[3] + GetBaseStats(data[i])[4] + (GetBaseStats(data[i])[1] / 2) + (GetBaseStats(data[i])[2] / 2)) * 2; //[hp + spec + speed + (atk/2) + (def/2)] * 2
+        teamStatVal += Number(GetStatValue(data[i]));
     }
     
     let maxTSVal = GetMaxTeamStatVal("g1ag"); //let user select format at some point
