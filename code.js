@@ -3,6 +3,7 @@ let test = document.querySelector("html");
     console.log("test loop" + jo);
 }*/
 //test.onmousewheel = dothing;
+console.log("LOADED TEAM RATER");
 test.addEventListener('keydown', function(event){
     if (event.keyCode == 16){
         dothing();
