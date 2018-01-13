@@ -143,7 +143,7 @@ function GetMovePower(move){
 //dont look down here
 
 var rawData = new Array();
-
+//add typing to the end of the string, formet: water.ice where x.y is type1/type2
 rawData.push("Mewtwo,106,110,90,154,130,590,415,318,278,406,358,2954,");
 rawData.push("Chansey,250,5,5,105,50,415,703,108,108,308,198,2634,");
 rawData.push("Zapdos,90,90,85,125,100,490,383,278,268,348,298,2604,");
