@@ -1,10 +1,8 @@
 let test = document.querySelector("html");
-/*for (let jo = 0; jo < 2; jo++){
-    console.log("test loop" + jo);
-}*/
-//test.onmousewheel = dothing;
 console.log("LOADED TEAM RATER");
+
 test.addEventListener('keydown', function(event){
+    console.log("SHIFT EVENT ACTIVATED");
     if (event.keyCode == 16){
         dothing();
     }
